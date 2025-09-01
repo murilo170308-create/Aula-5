@@ -1,0 +1,154 @@
+/* 3. Seletor universal - zera margens/paddings e ajusta box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Faz com que largura/altura incluam padding e borda */
+}
+
+/* 4. Body - configurações globais */
+body {
+  font-family: Arial, sans-serif; /* Define fonte */
+  line-height: 1.6; /* Espaçamento entre linhas */
+  color: #333; /* Cor principal do texto */
+  background-color: #f4f4f9; /* Fundo suave */
+  padding: 20px; /* Espaço interno */
+}
+
+/* 5. Container principal (main) */
+.container {
+  max-width: 900px;
+  margin: 0 auto; /* Centraliza o conteúdo */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* 6. Cabeçalho principal */
+#main-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  padding: 20px;
+  display: flex; /* Alinha elementos lado a lado */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 20px; /* Espaço entre texto e imagem */
+}
+
+#main-header a {
+  color: #fff; /* deixa branco no header */
+  border-bottom: 1px solid transparent;
+}
+
+#main-header a:hover {
+  color: #f0f0f0; /* tom de branco suave no hover */
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* 7. Estilo do nome */
+#main-header h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* 8. Foto */
+img {
+  border-radius: 50%; /* Foto arredondada */
+  border: 3px solid #fff; /* Borda branca */
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* 9. Address */
+address {
+  font-style: normal;
+}
+address p {
+  margin-bottom: 5px;
+  font-size: 0.95em; /* Menor que o padrão */
+}
+
+/* 10. Conteúdo (article) */
+article {
+  padding: 20px;
+}
+
+/* 11. Títulos principais */
+h2 {
+  font-size: 1.8em;
+  color: #444;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* 12. Lista ordenada (Formações) */
+ol > li {
+  list-style: none;
+  counter-increment: item; /* Contador */
+  margin-bottom: 20px;
+  position: relative;
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  border-left: 6px solid #667eea;
+}
+
+/* 13. Numeração automática */
+ol > li::before {
+  content: counter(item);
+  position: absolute;
+  left: -15px;
+  top: 20px;
+  background: #667eea;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+/* 14. Cada seção */
+section {
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+/* 15. Links */
+a {
+  color: #667eea;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* 16. Links hover */
+a:hover {
+  color: #764ba2;
+  border-bottom: 1px solid #764ba2;
+}
+
+/* 17. Títulos de formação */
+.titulo-formacao {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* 18. Hover nos títulos de formação */
+.titulo-formacao:hover {
+  color: #667eea;
+  transform: scale(1.05);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
